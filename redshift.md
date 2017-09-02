@@ -7,7 +7,7 @@ Copyright Transaction Processing Performance Council 1994 - 2010
 USAGE:
 dbgen [-{vf}][-T {pcsoPSOL}]
         [-s <scale>][-C <procs>][-S <step>]
-dbgen [-v] [-O m] [-s <scale>] [-U <updates>]
+        dbgen [-v] [-O m] [-s <scale>] [-U <updates>]
 
 To generate files for cutomers, lineitem, orders, nation use the below options
 
@@ -21,5 +21,7 @@ To generate the SF=1 (1GB), validation database population, use:
         dbgen -vf -T n -s 1
         dbgen -vf -T o -s 1
 
-To load data into S3 using AWS CLI
-  aws s3 cp ds_1gb/ s3://eimbigdatatpch/50gb --recursive 
+## To load data into S3 using AWS CLI
+  aws s3 cp ds_1gb/ s3://<<bucket_name>>/50gb --recursive 
+  
+  
